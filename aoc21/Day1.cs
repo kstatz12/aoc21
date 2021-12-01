@@ -11,10 +11,7 @@ namespace aoc21
             int prev = Int32.MaxValue;
             foreach(var curr in lines)
             {
-                if(curr > prev)
-                {
-                    count = count + 1;
-                }
+                count += curr > prev ? 1 : 0;
                 prev = curr;
             }
             return count;
